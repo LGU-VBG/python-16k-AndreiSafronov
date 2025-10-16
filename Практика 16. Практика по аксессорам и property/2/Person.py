@@ -7,9 +7,17 @@ class Person:
     def name(self):
         return self._name
 
+    @name.setter
+    def name(self, name):
+        self._name = name
+
     @property
     def surname(self):
         return self._surname
+
+    @surname.setter
+    def surname(self, surname):
+        self._surname = surname
 
     @property
     def fullname(self):
@@ -19,13 +27,7 @@ class Person:
     def fullname(self, value):
         self._name, self._surname = value.split()
 
-    @name.setter
-    def name(self, name):
-        self._name = name
 
-    @surname.setter
-    def surname(self, surname):
-        self._surname = surname
 
 
 person = Person('Mike', 'Pondsmith')
